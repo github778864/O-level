@@ -1,0 +1,133 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #0a192f;
+    color: #ccd6f6;
+}
+
+header {
+    background-color: #112240;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.subject-card {
+    background-color: #112240;
+    padding: 2.5rem;
+    border-radius: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #64ffda33 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.subject-card:hover::before {
+    opacity: 1;
+}
+
+.subject-card h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.subject-card h3::before {
+    font-size: 1.4em;
+}
+
+.math h3::before {
+    content: "➗";
+}
+
+.english h3::before {
+    content: "📖";
+}
+
+.bio h3::before {
+    content: "🧬";
+}
+
+.chem h3::before {
+    content: "⚗️";
+}
+
+.phys h3::before {
+    content: "🔭";
+}
+
+.subject-card p {
+    color: #8892b0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #112240;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.subject-card {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.subject-card:nth-child(1) { animation-delay: 0.1s; }
+.subject-card:nth-child(2) { animation-delay: 0.2s; }
+.subject-card:nth-child(3) { animation-delay: 0.3s; }
+.subject-card:nth-child(4) { animation-delay: 0.4s; }
+.subject-card:nth-child(5) { animation-delay: 0.5s; }

@@ -44,19 +44,6 @@ header h1:hover::before {
     transform: rotate(15deg) scale(1.1); /* Hover animation */
 }
 
-}
-
-header h2 {
-    font-size: 3.5rem; /* Bigger font size */
-    color: #64ffda;
-    font-weight: 700;
-    text-shadow: 0 0 15px #64ffda44;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
 /* Container Styles */
 .container {
     max-width: 1200px;

@@ -33,6 +33,10 @@ header h1 {
     gap: 15px;
 }
 
+    header h1:hover::before {
+      transform: rotate(15deg) scale(1.1); /* Hover animation */
+        }
+
 /* Container Styles */
 .container {
     max-width: 1200px;

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers - O Level Support</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #0a192f; /* Original background color */
+            color: #ccd6f6; /* Original text color */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #112240; /* Original header background */
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #64ffda; /* Original accent color */
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Year Section Styles */
+        .year-section {
+            margin-bottom: 1rem;
+            background: #112240; /* Original section background */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .year-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .year-header:hover {
+            background-color: #1f3a60; /* Original hover background */
+        }
+
+        .year-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #64ffda; /* Original accent color */
+            margin-left: 0.5rem;
+        }
+
+        .year-header::before {
+            content: '📁'; /* Folder icon */
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .year-header.active::before {
+            content: '📂'; /* Open folder icon */
+        }
+
+        /* Term Section Styles */
+        .term-section {
+            margin: 0.5rem 1rem;
+            background: #0a192f; /* Original background */
+            border-radius: 6px;
+        }
+
+        .term-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .term-header:hover {
+            background-color: #112240; /* Original hover background */
+        }
+
+        .term-header h4 {
+            margin: 0;
+            font-size: 1rem;
+            color: #64ffda; /* Original accent color */
+            margin-left: 0.5rem;
+        }
+
+        .term-header::before {
+            content: '📁'; /* Folder icon */
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .term-header.active::before {
+            content: '📂'; /* Open folder icon */
+        }
+
+        /* Papers Container */
+        .papers-container {
+            display: none;
+            padding: 0.5rem 1rem;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .paper-link {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #ccd6f6; /* Original text color */
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .paper-link:hover {
+            background-color: #1f3a60; /* Original hover background */
+        }
+
+        .paper-link::before {
+            content: '📄'; /* File icon */
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #112240; /* Original footer background */
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            color: #ccd6f6; /* Original text color */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .year-header h3 {
+                font-size: 1rem;
+            }
+
+            .term-header h4 {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Past Papers</h1>
+    </header>
+
+    <div class="container">
+         <!-- 2024 Papers -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleSection('2024')">
+                <h3>2024 Papers</h3>
+            </div>
+            <div class="papers-container" id="2024">
+                <!-- May-June Session -->
+                <div class="term-section">
+                    <div class="term-header" onclick="toggleTerm('2024-mj')">
+                        <h4>May-June Session</h4>
+                    </div>
+                    <div class="papers-container" id="2024-mj">
+                        <a href="https://drive.google.com/file/d/1qcYfPzNA-sDoFm7tpG3oXgUEW2-nWEw_/view?usp=drive_link" class="paper-link">Grade Threshold</a>
+                        <a href="https://drive.google.com/file/d/1UcKiY9O-sQ89Lxb_jPr_24kvh2dhwwQT/view?usp=drive_link" class="paper-link">Question Paper 11</a>
+                        <a href="https://drive.google.com/file/d/1ocfnUMzO62uWTZ58Cl8y8LsAaZy7B3J7/view?usp=drive_link" class="paper-link">Mark Scheme 11</a>
+                        <a href="https://drive.google.com/file/d/1L0QKL6PND9YVe3CfLKcUd-0nexMnaV1c/view?usp=drive_link" class="paper-link">Question Paper 12</a>
+                        <a href="https://drive.google.com/file/d/1X9yRywOSP_OWPfE-ONreHfRLEV3Mv27h/view?usp=drive_link" class="paper-link">Mark Scheme 12</a>
+                        <a href="https://drive.google.com/file/d/1sEua7fbl_xOUcbbgFa3BT20k3w0uLYNa/view?usp=drive_link" class="paper-link">Question Paper 21</a>
+                        <a href="https://drive.google.com/file/d/1IRUmtRIOI2zN2G_GU4qx0Tv7Yw8csg9c/view?usp=drive_link" class="paper-link">Mark Schemer 21</a>
+                        <a href="https://drive.google.com/file/d/1Q8rP9j6Kt_YhJmXA8afD_c-7_HGzsvJh/view?usp=drive_link" class="paper-link">Question Paper 22</a>
+                        <a href="https://drive.google.com/file/d/1Q8rP9j6Kt_YhJmXA8afD_c-7_HGzsvJh/view?usp=drive_link" class="paper-link">Mark Schemer 22</a>
+                       
+                    </div>
+                </div>
+
+                <!-- Oct-Nov Session -->
+                <div class="term-section">
+                    <div class="term-header" onclick="toggleTerm('2024-on')">
+                        <h4>October-November Session</h4>
+                    </div>
+                    <div class="papers-container" id="2024-on">
+                       <a href="https://drive.google.com/file/d/1rXegRHIyfJ-aK0d658pfC_T42DdfKQV8/view?usp=drive_link" class="paper-link">Grade Threshold</a>
+                        <a href="https://drive.google.com/file/d/1OA6aMDULbK464cSrUmHIOJiuzjNPScnE/view?usp=drive_link" class="paper-link">Question Paper 11</a>
+                        <a href="https://drive.google.com/file/d/19eePMeUce9SvO9E75ezSvnmmTGJ4MGnf/view?usp=drive_link" class="paper-link">Mark Scheme 11</a>
+                        <a href="https://drive.google.com/file/d/1uHv7oThiTJx99XFsPPOcRpT7Yf9VnT27/view?usp=drive_link" class="paper-link">Question Paper 12</a>
+                        <a href="https://drive.google.com/file/d/1FP1p1X5WP7DWlBswaD887CRSZV-feuC2/view?usp=drive_link" class="paper-link">Mark Scheme 12</a>
+                        <a href="https://drive.google.com/file/d/17UhRv149qNk9dODA5KqSaMJ-5-OY9gq5/view?usp=drive_link" class="paper-link">Question Paper 21</a>
+                        <a href="https://drive.google.com/file/d/1do_Y0Cnoj3lcREUp51NAJgvaXZkuaa-S/view?usp=drive_link" class="paper-link">Mark Schemer 21</a>
+                        <a href="https://drive.google.com/file/d/1xJb_5StvAw-CbGSLqk7vU8_Wd-UW6PPz/view?usp=drive_link" class="paper-link">Question Paper 22</a>
+                        <a href="https://drive.google.com/file/d/1GcX3CqVWf_e6DiYmTFCZf61XDzGeoxlg/view?usp=drive_link" class="paper-link">Mark Schemer 22</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2023 Papers -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleSection('2023')">
+                <h3>2023 Papers</h3>
+            </div>
+            <div class="papers-container" id="2023">
+                <!-- May-June Session -->
+                <div class="term-section">
+                    <div class="term-header" onclick="toggleTerm('2023-mj')">
+                        <h4>May-June Session</h4>
+                    </div>
+                    <div class="papers-container" id="2023-mj">
+                        <a href="https://drive.google.com/file/d/1u-KUw-iX4XF6qzDo0WHObk6lYWkHvrLf/view?usp=drive_link" class="paper-link">Examiner Report</a>
+                        <a href="https://drive.google.com/file/d/1Ui_jDY6lTt8EYgVIrnutWN2dgVwFuprs/view?usp=drive_link" class="paper-link">Grade Threshold</a>
+                        <a href="https://drive.google.com/file/d/1r-XEhrsRw99LhMZNUUHRyshZKmyZCzmQ/view?usp=drive_link" class="paper-link">Question Paper 11</a>
+                        <a href="https://drive.google.com/file/d/1t2_SpJJ18bgfIYc2cCMWtgSbhmYHKW1k/view?usp=drive_link" class="paper-link">Mark Scheme 11</a>
+                        <a href="https://drive.google.com/file/d/1SKGFwzsCo4bBcqVvw1gFWQqCiuyytPkN/view?usp=drive_link" class="paper-link">Question Paper 12</a>
+                        <a href="https://drive.google.com/file/d/1t2_SpJJ18bgfIYc2cCMWtgSbhmYHKW1k/view?usp=drive_link" class="paper-link">Mark Scheme 12</a>
+                        <a href="https://drive.google.com/file/d/1chGcfDuWG4iVHWK4EvO53X0sX6mwOkFK/view?usp=drive_link" class="paper-link">Question Paper 21</a>
+                        <a href="https://drive.google.com/file/d/1rJtKgXtajbiusrYF6vmlWDLWsEyI-bBt/view?usp=drive_link" class="paper-link">Mark Schemer 21</a>
+                        <a href="https://drive.google.com/file/d/1Uw8lh96dp2AQSF3A2tiZPuh1T2-2sYz6/view?usp=drive_link" class="paper-link">Question Paper 22</a>
+                        <a href="https://drive.google.com/file/d/1VDUv4RjcLgTBcjruM16hHwYg6VOwlUAw/view?usp=drive_link" class="paper-link">Mark Schemer 22</a>
+                       
+                    </div>
+                </div>
+
+                <!-- Oct-Nov Session -->
+                <div class="term-section">
+                    <div class="term-header" onclick="toggleTerm('2023-on')">
+                        <h4>October-November Session</h4>
+                    </div>
+                    <div class="papers-container" id="2023-on">
+                       <a href="https://drive.google.com/file/d/1rXegRHIyfJ-aK0d658pfC_T42DdfKQV8/view?usp=drive_link" class="paper-link">Grade Threshold</a>
+                        <a href="https://drive.google.com/file/d/1OA6aMDULbK464cSrUmHIOJiuzjNPScnE/view?usp=drive_link" class="paper-link">Question Paper 11</a>
+                        <a href="https://drive.google.com/file/d/19eePMeUce9SvO9E75ezSvnmmTGJ4MGnf/view?usp=drive_link" class="paper-link">Mark Scheme 11</a>
+                        <a href="https://drive.google.com/file/d/1uHv7oThiTJx99XFsPPOcRpT7Yf9VnT27/view?usp=drive_link" class="paper-link">Question Paper 12</a>
+                        <a href="https://drive.google.com/file/d/1FP1p1X5WP7DWlBswaD887CRSZV-feuC2/view?usp=drive_link" class="paper-link">Mark Scheme 12</a>
+                        <a href="https://drive.google.com/file/d/17UhRv149qNk9dODA5KqSaMJ-5-OY9gq5/view?usp=drive_link" class="paper-link">Question Paper 21</a>
+                        <a href="https://drive.google.com/file/d/1do_Y0Cnoj3lcREUp51NAJgvaXZkuaa-S/view?usp=drive_link" class="paper-link">Mark Schemer 21</a>
+                        <a href="https://drive.google.com/file/d/1xJb_5StvAw-CbGSLqk7vU8_Wd-UW6PPz/view?usp=drive_link" class="paper-link">Question Paper 22</a>
+                        <a href="https://drive.google.com/file/d/1GcX3CqVWf_e6DiYmTFCZf61XDzGeoxlg/view?usp=drive_link" class="paper-link">Mark Schemer 22</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2022 Papers -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleSection('2022')">
+                <h3>2022 Papers</h3>
+            </div>
+            <div class="papers-container" id="2022">
+                <!-- May-June Session -->
+                <div class="term-section">
+                    <div class="term-header" onclick="toggleTerm('2022-mj')">
+                        <h4>May-June Session</h4>
+                    </div>
+                    <div class="papers-container" id="2022-mj">
+                        <a href="#" class="paper-link">Mathematics Paper 1</a>
+                        <a href="#" class="paper-link">Mathematics Paper 2</a>
+                    </div>
+                </div>
+
+                <!-- Oct-Nov Session -->
+                <div class="term-section">
+                    <div class="term-header" onclick="toggleTerm('2022-on')">
+                        <h4>October-November Session</h4>
+                    </div>
+                    <div class="papers-container" id="2022-on">
+                        <a href="#" class="paper-link">Physics Paper 1</a>
+                        <a href="#" class="paper-link">Physics Paper 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more years as needed -->
+    </div>
+
+    <footer>
+        <p>© 2023 O Level Helper. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSection(year) {
+            const container = document.getElementById(year);
+            const header = document.querySelector(`[onclick="toggleSection('${year}')"]`);
+            
+            // Toggle display
+            container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+            
+            // Toggle active class
+            header.classList.toggle('active');
+        }
+
+        function toggleTerm(termId) {
+            const container = document.getElementById(termId);
+            const header = document.querySelector(`[onclick="toggleTerm('${termId}')"]`);
+            
+            // Toggle display
+            container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+            
+            // Toggle active class
+            header.classList.toggle('active');
+        }
+
+        // Close all sections when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.papers-container').forEach(container => {
+                container.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

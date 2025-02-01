@@ -1,187 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Level Computer Science</title>
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        body {
-            background-color: #0a192f;
-            color: #ccd6f6;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #112240;
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 2.8rem;
-            color: #64ffda;
-            margin-bottom: 1rem;
-        }
-        .subtitle {
-            font-size: 1.3rem;
-            color: #8892b0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Level Computer Science</title>
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+<style>
+/* General Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+body {
+background-color: #0a192f;
+color: #ccd6f6;
+line-height: 1.6;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
 
-        /* Main Content Grid */
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 3rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
+/* Header Styles */
+header {
+background-color: #112240;
+padding: 3rem 2rem;
+text-align: center;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+position: relative; /* Added for positioning the back button */
+}
+.header-content {
+max-width: 800px;
+margin: 0 auto;
+}
+h1 {
+font-size: 2.8rem;
+color: #64ffda;
+margin-bottom: 1rem;
+}
+.subtitle {
+font-size: 1.3rem;
+color: #8892b0;
+}
 
-        /* Topic Card Styles */
-        .topic-card {
-            background-color: #112240;
-            border-radius: 10px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid #233554;
-        }
-        .topic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            border-color: #64ffda;
-        }
-        .topic-icon {
-            font-size: 2rem;
-            color: #64ffda;
-            margin-bottom: 1rem;
-        }
-        .topic-title {
-            font-size: 1.4rem;
-            color: #64ffda;
-            margin-bottom: 0.8rem;
-        }
-        .topic-description {
-            font-size: 1rem;
-            color: #8892b0;
-            line-height: 1.6;
-        }
+/* Back Button Styles */
+.back-button {
+position: absolute;
+left: 2rem;
+top: 50%;
+transform: translateY(-50%);
+background: none;
+border: none;
+color: #64ffda;
+font-size: 1.2rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+text-decoration: none; /* Remove underline for href */
+}
+.back-button:hover {
+color: #ccd6f6;
+}
 
-        /* Footer Styles */
-        footer {
-            background-color: #112240;
-            text-align: center;
-            padding: 2rem;
-            margin-top: auto;
-        }
-        .footer-text {
-            font-size: 0.9rem;
-            color: #8892b0;
-        }
+/* Main Content Grid */
+.topics-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+padding: 3rem 2rem;
+max-width: 1200px;
+margin: 0 auto;
+flex: 1;
+}
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            .topics-grid {
-                grid-template-columns: 1fr;
-                padding: 2rem 1rem;
-            }
-        }
-    </style>
+/* Topic Card Styles */
+.topic-card {
+background-color: #112240;
+border-radius: 10px;
+padding: 2rem;
+transition: all 0.3s ease;
+text-decoration: none;
+color: inherit;
+border: 1px solid #233554;
+}
+.topic-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+border-color: #64ffda;
+}
+.topic-icon {
+font-size: 2rem;
+color: #64ffda;
+margin-bottom: 1rem;
+}
+.topic-title {
+font-size: 1.4rem;
+color: #64ffda;
+margin-bottom: 0.8rem;
+}
+.topic-description {
+font-size: 1rem;
+color: #8892b0;
+line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+background-color: #112240;
+text-align: center;
+padding: 2rem;
+margin-top: auto;
+}
+.footer-text {
+font-size: 0.9rem;
+color: #8892b0;
+}
+
+@media (max-width: 768px) {
+h1 {
+font-size: 2rem;
+}
+.subtitle {
+font-size: 1.1rem;
+}
+.topics-grid {
+grid-template-columns: 1fr;
+padding: 2rem 1rem;
+}
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>O Level Computer Science</h1>
-            <p class="subtitle">Comprehensive topical video playlists for effective learning</p>
-        </div>
-    </header>
-
-    <main class="topics-grid">
-        <!-- Data Representation -->
-        <a href="(1) Data Representation.html" class="topic-card">
-            <i class="fas fa-database topic-icon"></i>
-            <h3 class="topic-title">(1) Data Representation</h3>
-            <p class="topic-description">
-                Binary, hexadecimal, data storage, and compression techniques. 
-                Master how computers represent and store different types of data.
-            </p>
-        </a>
-
-     <!-- Data Transmission -->
-<a href="(2) Data Transmission.html" class="topic-card">
-    <i class="fas fa-exchange-alt topic-icon"></i> <!-- Changed icon to represent data transmission -->
-    <h3 class="topic-title">(2) Data Transmission</h3>
-    <p class="topic-description">
-        Learn about data transmission methods, protocols, and error detection techniques. 
-        Understand how data is transferred across networks.
-    </p>
+<header>
+<!-- Back Button -->
+<a href="computer-science.html" class="back-button" id="back-button">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+Back
 </a>
-        <!-- Hardware -->
-        <a href="(3) Hardware.html" class="topic-card">
-            <i class="fas fa-microchip topic-icon"></i>
-            <h3 class="topic-title">(3) Hardware</h3>
-            <p class="topic-description">
-                Computer architecture, components, and logic gates. 
-                Understand the physical components of computing systems.
-            </p>
-        </a>
 
-        <!-- Networks -->
-        <a href="#" class="topic-card">
-            <i class="fas fa-network-wired topic-icon"></i>
-            <h3 class="topic-title">Networking</h3>
-            <p class="topic-description">
-                Network types, protocols, and security. 
-                Explore how devices communicate and share resources.
-            </p>
-        </a>
+<div class="header-content">
+<h1>O Level Computer Science</h1>
+<p class="subtitle">Comprehensive topical video playlists for effective learning</p>
+</div>
+</header>
 
-        <!-- Databases -->
-        <a href="#" class="topic-card">
-            <i class="fas fa-database topic-icon"></i>
-            <h3 class="topic-title">Databases</h3>
-            <p class="topic-description">
-                SQL, relationships, and normalization. 
-                Learn to design and interact with relational databases.
-            </p>
-        </a>
+<main class="topics-grid">
+<!-- Data Representation -->
+<a href="(1) Data Representation.html" class="topic-card">
+<i class="fas fa-database topic-icon"></i>
+<h3 class="topic-title">(1) Data Representation</h3>
+<p class="topic-description">
+Binary, hexadecimal, data storage, and compression techniques.
+Master how computers represent and store different types of data.
+</p>
+</a>
 
-        <!-- Ethics -->
-        <a href="#" class="topic-card">
-            <i class="fas fa-user-shield topic-icon"></i>
-            <h3 class="topic-title">Ethics & Security</h3>
-            <p class="topic-description">
-                Cybersecurity, legislation, and ethical considerations. 
-                Understand the social impact of computing.
-            </p>
-        </a>
-    </main>
+<!-- Data Transmission -->
+<a href="(2) Data Transmission.html" class="topic-card">
+<i class="fas fa-exchange-alt topic-icon"></i> <!-- Changed icon to represent data transmission -->
+<h3 class="topic-title">(2) Data Transmission</h3>
+<p class="topic-description">
+Learn about data transmission methods, protocols, and error detection techniques.
+Understand how data is transferred across networks.
+</p>
+</a>
+<!-- Hardware -->
+<a href="(3) Hardware.html" class="topic-card">
+<i class="fas fa-microchip topic-icon"></i>
+<h3 class="topic-title">(3) Hardware</h3>
+<p class="topic-description">
+Computer architecture, components, and logic gates.
+Understand the physical components of computing systems.
+</p>
+</a>
 
-    <footer>
-        <p class="footer-text">© 2023 O Level Computer Science Resources. All rights reserved.</p>
-    </footer>
+<!-- Networks -->
+<a href="#" class="topic-card">
+<i class="fas fa-network-wired topic-icon"></i>
+<h3 class="topic-title">Networking</h3>
+<p class="topic-description">
+Network types, protocols, and security.
+Explore how devices communicate and share resources.
+</p>
+</a>
+
+<!-- Databases -->
+<a href="#" class="topic-card">
+<i class="fas fa-database topic-icon"></i>
+<h3 class="topic-title">Databases</h3>
+<p class="topic-description">
+SQL, relationships, and normalization.
+Learn to design and interact with relational databases.
+</p>
+</a>
+
+<!-- Ethics -->
+<a href="#" class="topic-card">
+<i class="fas fa-user-shield topic-icon"></i>
+<h3 class="topic-title">Ethics & Security</h3>
+<p class="topic-description">
+Cybersecurity, legislation, and ethical considerations.
+Understand the social impact of computing.
+</p>
+</a>
+</main>
+
+<footer>
+<p class="footer-text">© 2023 O Level Computer Science Resources. All rights reserved.</p>
+</footer>
 </body>
 </html>

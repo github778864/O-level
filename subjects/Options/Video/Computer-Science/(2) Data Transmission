@@ -171,52 +171,44 @@
         </a>
         <h1>(1) Data Representation</h1>
     </header>
-    <main class="main-content">
-        <div class="video-container">
-            <iframe
-                id="video-player"
-                class="video-player"
-                src="https://www.youtube.com/embed/rRgGlJ0PQSc"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+  <main class="main-content">
+    <div class="video-container">
+        <iframe
+            id="video-player"
+            class="video-player"
+            src="https://www.youtube.com/embed/rRgGlJ0PQSc"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="playlist-header">
+        <h2 style="font-size: 1.2rem; color: #aaa;">Playlist</h2>
+        <button class="toggle-button" id="toggle-button">Collapse Playlist</button>
+    </div>
+    <div class="playlist">
+        <div class="playlist-item" data-video-id="1">  <img src="https://i.ytimg.com/vi/1/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+                <div class="playlist-title">IGCSE Computer Science 2023-25 - (2a) Data Transmission - DATA PACKETS (Video 1)</div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
         </div>
-        <div class="playlist-item" data-video-id="1">
-    <img src="https://i.ytimg.com/vi/1/hqdefault.jpg" class="playlist-thumbnail">
-    <div class="playlist-info">
-        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2a) Data Transmission - DATA PACKETS (Video 1)</div>
-        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
-    </div>
-</div>
 
-<div class="playlist-item" data-video-id="2">
-    <img src="https://i.ytimg.com/vi/2/hqdefault.jpg" class="playlist-thumbnail">
-    <div class="playlist-info">
-        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2b) Data Transmission - 2.2-2.3 Data Transmission and the USB</div>
-        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
-    </div>
-</div>
-
-<div class="playlist-item" data-video-id="3">
-    <img src="https://i.ytimg.com/vi/3/hqdefault.jpg" class="playlist-thumbnail">
-    <div class="playlist-info">
-        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2c) Data Transmission - Error Detection, PARITY, CHECKSUM, ARQ</div>
-        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
-    </div>
-</div>
-
-<div class="playlist-item" data-video-id="4">
-    <img src="https://i.ytimg.com/vi/4/hqdefault.jpg" class="playlist-thumbnail">
-    <div class="playlist-info">
-        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2d) Data Transmission - ENCRYPTION, SYMMETRIC and ASYMMETRIC</div>
-        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
-    </div>
-</div>
-                </div>
-            </div>
+        <div class="playlist-item" data-video-id="2">  <img src="https://i.ytimg.com/vi/2/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+                <div class="playlist-title">IGCSE Computer Science 2023-25 - (2b) Data Transmission - 2.2-2.3 Data Transmission and the USB</div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
         </div>
-    </main>
+
+        <div class="playlist-item" data-video-id="3">  <img src="https://i.ytimg.com/vi/3/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+                <div class="playlist-title">IGCSE Computer Science 2023-25 - (2c) Data Transmission - Error Detection, PARITY, CHECKSUM, ARQ</div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
+        </div>
+
+        <div class="playlist-item" data-video-id="4">  <img src="https://i.ytimg.com/vi/4/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+                <div class="playlist-title">IGCSE Computer Science 2023-25 - (2d) Data Transmission - ENCRYPTION, SYMMETRIC and ASYMMETRIC</div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
+        </div>
+
+    </div>
+</main>
     <script>
         // Function to switch videos
         const videoPlayer = document.getElementById('video-player');

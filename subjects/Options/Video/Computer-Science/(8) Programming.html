@@ -30,7 +30,8 @@
             font-weight: 700;
             margin: 0;
         }
-        .back-button {
+        /* Header Back Button Styles */
+        .header-back-button {
             position: absolute;
             left: 2rem;
             top: 50%;
@@ -45,7 +46,7 @@
             gap: 0.5rem;
             text-decoration: none; /* Remove underline for href */
         }
-        .back-button:hover {
+        .header-back-button:hover {
             color: #ccd6f6;
         }
         /* Container Styles */
@@ -161,8 +162,8 @@
             padding: 2rem;
             margin-top: 5rem;
         }
-       /* Back Button Fixed at Bottom */
-        .back-button {
+        /* Fixed Back Button at Bottom */
+        .fixed-back-button {
             position: fixed;
             bottom: 1.5rem;
             left: 50%;
@@ -181,7 +182,7 @@
             text-decoration: none; /* Remove underline for href */
             transition: all 0.3s ease;
         }
-        .back-button:hover {
+        .fixed-back-button:hover {
             background: #64ffda;
             color: #0a192f;
         }
@@ -189,7 +190,8 @@
 </head>
 <body>
     <header class="header">
-        <a href="https://github778864.github.io/O-level/subjects/computer-science.html" class="back-button" id="back-button">
+        <!-- Header Back Button -->
+        <a href="https://github778864.github.io/O-level/subjects/computer-science.html" class="header-back-button" id="header-back-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
@@ -203,7 +205,7 @@
             <iframe
                 id="video-player"
                 class="video-player"
-                src="https://www.youtube.com/embed/NnR02O_bB_g"
+                src=""
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -213,8 +215,7 @@
             <h2 style="font-size: 1.2rem; color: #aaa;">Playlist</h2>
             <button class="toggle-button" id="toggle-button">Collapse Playlist</button>
         </div>
-        <div class="playlist">
-            <div class="playlist-item" data-video-id="NnR02O_bB_g">
+        <div class="playlist-item" data-video-id="NnR02O_bB_g">
                 <img src="https://i.ytimg.com/vi/NnR02O_bB_g/hqdefault.jpg" class="playlist-thumbnail">
                 <div class="playlist-info">
                     <div class="playlist-title">IGCSE Computer Science 2023-25 - Topic 8: Programming (1) - Programming Concepts</div>
@@ -279,8 +280,8 @@
             </div>
         </div>
     </main>
-  <!-- Back Button Fixed at Bottom -->
-    <a href="computer-science.html" class="back-button" id="back-button">
+    <!-- Fixed Back Button at Bottom -->
+    <a href="computer-science.html" class="fixed-back-button" id="fixed-back-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
@@ -304,7 +305,6 @@
                 item.style.backgroundColor = '#404040';
             });
         });
-
         // Function to toggle playlist visibility
         const toggleButton = document.getElementById('toggle-button');
         const playlist = document.querySelector('.playlist');

@@ -15,38 +15,23 @@
         body {
             background-color: #0a192f;
             color: #ccd6f6;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         /* Header Styles */
         header {
             background-color: #112240;
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            font-size: 1.5rem; /* Adjusted font size */
+            font-size: 1.5rem;
             color: #64ffda;
             font-weight: 700;
             margin: 0;
-        }
-        .back-button {
-            position: absolute;
-            left: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: #64ffda;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none; /* Remove underline for href */
-        }
-        .back-button:hover {
-            color: #ccd6f6;
         }
         /* Container Styles */
         .container {
@@ -117,7 +102,7 @@
         }
         .playlist-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         .playlist-item:hover::before {
             opacity: 1;
@@ -161,17 +146,34 @@
             padding: 2rem;
             margin-top: 5rem;
         }
+        /* Back Button Fixed at Bottom */
+        .back-button {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #112240;
+            color: #64ffda;
+            font-size: 1.2rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-decoration: none; /* Remove underline for href */
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: #64ffda;
+            color: #0a192f;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="computer-science.html" class="back-button" id="back-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-            Back
-        </a>
         <h1>(2) Data Transmission</h1>
     </header>
     <main class="main-content">
@@ -220,9 +222,16 @@
             </div>
         </div>
     </main>
-    <footer>
-        <!-- Footer content can be added here -->
-    </footer>
+
+    <!-- Back Button Fixed at Bottom -->
+    <a href="computer-science.html" class="back-button" id="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back
+    </a>
+
     <script>
         // Function to switch videos
         const videoPlayer = document.getElementById('video-player');

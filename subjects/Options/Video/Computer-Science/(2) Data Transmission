@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playlist</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        /* Header Styles */
+        header {
+            background-color: #112240;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        header h1 {
+            font-size: 1.5rem; /* Adjusted font size */
+            color: #64ffda;
+            font-weight: 700;
+            margin: 0;
+        }
+        .back-button {
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #64ffda;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none; /* Remove underline for href */
+        }
+        .back-button:hover {
+            color: #ccd6f6;
+        }
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+        }
+        .video-player {
+            width: 100%;
+            height: 450px;
+            background: black;
+        }
+        .playlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+        .playlist {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .playlist.collapsed {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: #112240;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+        .playlist-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #64ffda33 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .playlist-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .playlist-item:hover::before {
+            opacity: 1;
+        }
+        .playlist-thumbnail {
+            width: 120px;
+            height: 68px;
+            object-fit: cover;
+            background: #202020;
+        }
+        .playlist-info {
+            flex: 1;
+        }
+        .playlist-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            color: #64ffda;
+            font-weight: 600;
+        }
+        .playlist-channel {
+            font-size: 0.9rem;
+            color: #8892b0;
+        }
+        .toggle-button {
+            padding: 0.5rem 1rem;
+            background: #112240;
+            color: #64ffda;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .toggle-button:hover {
+            background: #64ffda;
+            color: #0a192f;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #112240;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="https://github778864.github.io/O-level/subjects/computer-science.html" class="back-button" id="back-button">
+            <svg xmlns="" width="24" height="24" viewBox="0http://www.w3.org/2000/svg 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back
+        </a>
+        <h1>(1) Data Representation</h1>
+    </header>
+    <main class="main-content">
+        <div class="video-container">
+            <iframe
+                id="video-player"
+                class="video-player"
+                src="https://www.youtube.com/embed/rRgGlJ0PQSc"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="playlist-item" data-video-id="1">
+    <img src="https://i.ytimg.com/vi/1/hqdefault.jpg" class="playlist-thumbnail">
+    <div class="playlist-info">
+        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2a) Data Transmission - DATA PACKETS (Video 1)</div>
+        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
+    </div>
+</div>
+
+<div class="playlist-item" data-video-id="2">
+    <img src="https://i.ytimg.com/vi/2/hqdefault.jpg" class="playlist-thumbnail">
+    <div class="playlist-info">
+        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2b) Data Transmission - 2.2-2.3 Data Transmission and the USB</div>
+        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
+    </div>
+</div>
+
+<div class="playlist-item" data-video-id="3">
+    <img src="https://i.ytimg.com/vi/3/hqdefault.jpg" class="playlist-thumbnail">
+    <div class="playlist-info">
+        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2c) Data Transmission - Error Detection, PARITY, CHECKSUM, ARQ</div>
+        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
+    </div>
+</div>
+
+<div class="playlist-item" data-video-id="4">
+    <img src="https://i.ytimg.com/vi/4/hqdefault.jpg" class="playlist-thumbnail">
+    <div class="playlist-info">
+        <div class="playlist-title">IGCSE Computer Science 2023-25 - (2d) Data Transmission - ENCRYPTION, SYMMETRIC and ASYMMETRIC</div>
+        <div class="playlist-channel">Mr Bulmer's Learning Zone (or whatever your channel name is)</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Function to switch videos
+        const videoPlayer = document.getElementById('video-player');
+        const playlistItems = document.querySelectorAll('.playlist-item');
+        playlistItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const videoId = item.getAttribute('data-video-id');
+                videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+                
+                // Highlight the selected video
+                playlistItems.forEach(i => i.style.backgroundColor = '#303030');
+                item.style.backgroundColor = '#404040';
+            });
+        });
+
+        // Function to toggle playlist visibility
+        const toggleButton = document.getElementById('toggle-button');
+        const playlist = document.querySelector('.playlist');
+        toggleButton.addEventListener('click', () => {
+            playlist.classList.toggle('collapsed');
+            if (playlist.classList.contains('collapsed')) {
+                toggleButton.textContent = 'Open Playlist';
+            } else {
+                toggleButton.textContent = 'Collapse Playlist';
+            }
+        });
+    </script>
+</body>
+</html>

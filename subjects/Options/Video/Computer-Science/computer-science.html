@@ -30,21 +30,26 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #112240;
-  padding: 1rem 2rem; /* Reduced padding for compactness */
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #112240;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
 }
-
-.header-content {
-  max-width: 800px;
-  margin: 0 auto;
+header h1 {
+    font-size: 3.5rem; /* Bigger font size */
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 15px #64ffda44;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
-
-h1 {
-  font-size: 2.8rem;
-  color: #64ffda;
-  margin-bottom: 1rem;
+header h1:hover::before {
+    transform: rotate(15deg) scale(1.1); /* Hover animation */
 }
 
 /* Main Content Grid */

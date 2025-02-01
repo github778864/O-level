@@ -46,10 +46,10 @@
         /* Main Content Grid */
         .topics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller columns */
-            gap: 1.5rem; /* Reduced gap */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             padding: 3rem 2rem;
-            max-width: 1000px; /* Reduced max-width */
+            max-width: 1200px;
             margin: 0 auto;
             flex: 1;
         }
@@ -58,12 +58,11 @@
         .topic-card {
             background-color: #112240;
             border-radius: 10px;
-            padding: 1.5rem; /* Reduced padding */
+            padding: 2rem;
             transition: all 0.3s ease;
             text-decoration: none;
             color: inherit;
             border: 1px solid #233554;
-            width: 100%; /* Ensure cards take full width of their container */
         }
         .topic-card:hover {
             transform: translateY(-5px);
@@ -71,19 +70,19 @@
             border-color: #64ffda;
         }
         .topic-icon {
-            font-size: 1.8rem; /* Slightly smaller icon */
+            font-size: 2rem;
+            color: #64ffda;
+            margin-bottom: 1rem;
+        }
+        .topic-title {
+            font-size: 1.4rem;
             color: #64ffda;
             margin-bottom: 0.8rem;
         }
-        .topic-title {
-            font-size: 1.2rem; /* Slightly smaller title */
-            color: #64ffda;
-            margin-bottom: 0.6rem;
-        }
         .topic-description {
-            font-size: 0.95rem; /* Slightly smaller description */
+            font-size: 1rem;
             color: #8892b0;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* Footer Styles */
@@ -127,6 +126,7 @@
             <h3 class="topic-title">Data Representation</h3>
             <p class="topic-description">
                 Binary, hexadecimal, data storage, and compression techniques. 
+                Master how computers represent and store different types of data.
             </p>
         </a>
 
@@ -136,6 +136,7 @@
             <h3 class="topic-title">Programming Concepts</h3>
             <p class="topic-description">
                 Algorithms, flowcharts, pseudocode, and programming fundamentals. 
+                Build strong foundation in computational thinking.
             </p>
         </a>
 
@@ -145,6 +146,7 @@
             <h3 class="topic-title">Computer Hardware</h3>
             <p class="topic-description">
                 Computer architecture, components, and logic gates. 
+                Understand the physical components of computing systems.
             </p>
         </a>
 
@@ -154,6 +156,7 @@
             <h3 class="topic-title">Networking</h3>
             <p class="topic-description">
                 Network types, protocols, and security. 
+                Explore how devices communicate and share resources.
             </p>
         </a>
 
@@ -163,6 +166,7 @@
             <h3 class="topic-title">Databases</h3>
             <p class="topic-description">
                 SQL, relationships, and normalization. 
+                Learn to design and interact with relational databases.
             </p>
         </a>
 
@@ -172,6 +176,7 @@
             <h3 class="topic-title">Ethics & Security</h3>
             <p class="topic-description">
                 Cybersecurity, legislation, and ethical considerations. 
+                Understand the social impact of computing.
             </p>
         </a>
     </main>

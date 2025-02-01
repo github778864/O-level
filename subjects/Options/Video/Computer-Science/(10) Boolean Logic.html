@@ -253,6 +253,10 @@
         // Function to switch videos
         const videoPlayer = document.getElementById('video-player');
         const playlistItems = document.querySelectorAll('.playlist-item');
+
+        // Highlight the first video by default
+        playlistItems[0].style.backgroundColor = '#404040';
+
         playlistItems.forEach(item => {
             item.addEventListener('click', () => {
                 const videoId = item.getAttribute('data-video-id');
@@ -263,6 +267,7 @@
                 item.style.backgroundColor = '#404040';
             });
         });
+
         // Function to toggle playlist visibility
         const toggleButton = document.getElementById('toggle-button');
         const playlist = document.querySelector('.playlist');

@@ -176,8 +176,7 @@
         <iframe
             id="video-player"
             class="video-player"
-            src="https://www.youtube.com/embed/rRgGlJ0PQSc"
-            frameborder="0"
+            src="https://www.youtube.com/embed/rRgGlJ0PQSc"  frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
@@ -187,24 +186,36 @@
         <button class="toggle-button" id="toggle-button">Collapse Playlist</button>
     </div>
     <div class="playlist">
-        <div class="playlist-item" data-video-id="1">  <img src="https://i.ytimg.com/vi/1/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+        <div class="playlist-item" data-video-id="6">
+            <img src="https://i.ytimg.com/vi/6/hqdefault.jpg" class="playlist-thumbnail">
+            <div class="playlist-info">
                 <div class="playlist-title">IGCSE Computer Science 2023-25 - (2a) Data Transmission - DATA PACKETS (Video 1)</div>
-                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div>
+            </div>
         </div>
 
-        <div class="playlist-item" data-video-id="2">  <img src="https://i.ytimg.com/vi/2/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+        <div class="playlist-item" data-video-id="7">
+            <img src="https://i.ytimg.com/vi/7/hqdefault.jpg" class="playlist-thumbnail">
+            <div class="playlist-info">
                 <div class="playlist-title">IGCSE Computer Science 2023-25 - (2b) Data Transmission - 2.2-2.3 Data Transmission and the USB</div>
-                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div>
+            </div>
         </div>
 
-        <div class="playlist-item" data-video-id="3">  <img src="https://i.ytimg.com/vi/3/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+        <div class="playlist-item" data-video-id="8">
+            <img src="https://i.ytimg.com/vi/8/hqdefault.jpg" class="playlist-thumbnail">
+            <div class="playlist-info">
                 <div class="playlist-title">IGCSE Computer Science 2023-25 - (2c) Data Transmission - Error Detection, PARITY, CHECKSUM, ARQ</div>
-                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div>
+            </div>
         </div>
 
-        <div class="playlist-item" data-video-id="4">  <img src="https://i.ytimg.com/vi/4/hqdefault.jpg" class="playlist-thumbnail"> <div class="playlist-info">
+        <div class="playlist-item" data-video-id="9">
+            <img src="https://i.ytimg.com/vi/9/hqdefault.jpg" class="playlist-thumbnail">
+            <div class="playlist-info">
                 <div class="playlist-title">IGCSE Computer Science 2023-25 - (2d) Data Transmission - ENCRYPTION, SYMMETRIC and ASYMMETRIC</div>
-                <div class="playlist-channel">Mr Bulmer's Learning Zone</div> </div>
+                <div class="playlist-channel">Mr Bulmer's Learning Zone</div>
+            </div>
         </div>
 
     </div>

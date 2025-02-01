@@ -25,7 +25,7 @@ flex-direction: column;
 /* Header Styles */
 header {
 background-color: #112240;
-padding: 3rem 2rem;
+padding: 1rem 2rem; /* Reduced padding from 3rem to 1rem for top and bottom */
 text-align: center;
 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 position: relative; /* Added for positioning the back button */
@@ -38,10 +38,6 @@ h1 {
 font-size: 2.8rem;
 color: #64ffda;
 margin-bottom: 1rem;
-}
-.subtitle {
-font-size: 1.3rem;
-color: #8892b0;
 }
 
 /* Back Button Styles */
@@ -122,9 +118,6 @@ color: #8892b0;
 h1 {
 font-size: 2rem;
 }
-.subtitle {
-font-size: 1.1rem;
-}
 .topics-grid {
 grid-template-columns: 1fr;
 padding: 2rem 1rem;
@@ -135,14 +128,13 @@ padding: 2rem 1rem;
 <body>
 <header>
 <!-- Back Button -->
-<a href="../../../computer-science.html" class="back-button" id="back-button">
+<a href="computer-science.html" class="back-button" id="back-button">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
 Back
 </a>
 
 <div class="header-content">
 <h1>O Level Computer Science</h1>
-<p class="subtitle">Comprehensive topical video playlists for effective learning</p>
 </div>
 </header>
 

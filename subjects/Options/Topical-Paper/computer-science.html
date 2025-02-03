@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        /* Header Styles */
+        header {
+            background-color: #112240;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            color: #64ffda;
+            font-weight: 700;
+            text-shadow: 0 0 15px #64ffda44;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        /* Section & Card Styles */
+        .data-section {
+            padding: 2rem;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .section-header h2 {
+            color: #ccd6f6;
+            margin-right: 10px;
+        }
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #112240;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content vertically */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #172a49;
+        }
+        .card h3 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            text-align: center; /* Center card title */
+        }
+        .card p {
+            color: #ccd6f6;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            text-align: center; /* Center card description */
+        }
+        .download-btn {
+            background-color: #64ffda;
+            color: #112240;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .download-btn:hover {
+            background-color: #52b788;
+            color: #0a192f;
+        }
+        .download-btn:focus {
+            outline: 2px solid #52b788;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 100%; /* Full width on small screens */
+            }
+        }
+         .download-btn {
+            text-decoration: none; /* Removes underline */
+            color: white; /* Optional: Set text color */
+            background-color: #007BFF; /* Optional: Set button background color */
+            padding: 10px 20px; /* Optional: Add padding for better appearance */
+            border-radius: 5px; /* Optional: Rounded corners */
+            font-size: 16px; /* Optional: Adjust font size */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            display: inline-block; /* Ensures proper alignment */
+            margin-top: 10px; /* Adds some space between text and button */
+        }
+
+        /* Hover effect for the download button */
+        .download-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Computer Science</h1>
+</header>
+<!-- Data Representation -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Data Representation</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Number Systems</h3>
+            <p>Explore binary, hexadecimal, and denary number systems. Learn how to convert between these systems, understand their applications in computing, and grasp the significance of base-2 (binary) in digital electronics.</p>
+            <a href="downloads/number-systems.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Text, Sound & Images</h3>
+            <p>Understand how text is represented using ASCII and Unicode encoding. Dive into sound representation through sampling and quantization, and explore image formats like JPEG, PNG, and GIF, including compression techniques.</p>
+            <a href="downloads/text-sound-images.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Data Storage & Compression</h3>
+            <p>Learn about various data storage methods such as sequential and direct access. Explore compression techniques like lossless (ZIP) and lossy (MP3) compression, and understand how they reduce file size while maintaining quality.</p>
+            <a href="downloads/data-storage-compression.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Data Transmission -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Data Transmission</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Types & Methods of Data Transmission</h3>
+            <p>Discover the fundamentals of data transmission, including serial and parallel communication. Learn about packet switching, data packets, and protocols like TCP/IP. Understand the role of USB and other interfaces in data transfer.</p>
+            <a href="downloads/data-transmission.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Methods of Error Detection</h3>
+            <p>Explore error detection techniques such as parity checks, checksums, and cyclic redundancy checks (CRC). Understand Automatic Repeat Request (ARQ) protocols and how they ensure data integrity during transmission.</p>
+            <a href="downloads/error-detection.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Encryption</h3>
+            <p>Dive into symmetric and asymmetric encryption methods like AES and RSA. Learn about public and private keys, digital certificates, and how encryption secures data in transit over networks like the internet.</p>
+            <a href="downloads/encryption.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Hardware -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Hardware</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Computer Architecture</h3>
+            <p>Study the Von Neumann architecture, which forms the basis of modern computers. Learn about the CPU's role in executing instructions, the fetch-decode-execute cycle, and how memory interacts with the processor.</p>
+            <a href="downloads/computer-architecture.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Input & Output Devices</h3>
+            <p>Explore input devices like keyboards, mice, and sensors, as well as output devices like monitors, printers, and speakers. Understand how these devices interact with the computer system to facilitate user interaction.</p>
+            <a href="downloads/input-output-devices.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Data Storage</h3>
+            <p>Learn about different types of data storage, including volatile (RAM) and non-volatile (HDD, SSD) storage. Understand cloud storage solutions and how they provide scalable, remote data storage options.</p>
+            <a href="downloads/data-storage.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Network Hardware</h3>
+            <p>Explore network interface cards (NICs), MAC addresses, IP addressing, and routers. Understand how these components work together to enable communication between devices over local and wide-area networks.</p>
+            <a href="downloads/network-hardware.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Software -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Software</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Types of Software & Interrupts</h3>
+            <p>Understand the difference between system software (OS, drivers) and application software (word processors, browsers). Learn about interrupts and how they allow hardware to communicate with the CPU.</p>
+            <a href="downloads/software-interrupts.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Types of Programming Language, Translators & IDEs</h3>
+            <p>Explore high-level languages like Python and Java, as well as low-level assembly languages. Learn about compilers, interpreters, and integrated development environments (IDEs) that help developers write and debug code.</p>
+            <a href="downloads/programming-languages.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- The Internet & its Uses -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>The Internet & its Uses</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>The Internet & the World Wide Web</h3>
+            <p>Understand the difference between the internet and the World Wide Web. Learn about web protocols like HTTP/HTTPS, how browsers render web pages, and the role of cookies in tracking user sessions.</p>
+            <a href="downloads/internet-www.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Digital Currency</h3>
+            <p>Explore the basics of digital currencies like Bitcoin and Ethereum. Learn about blockchain technology, decentralized ledgers, and how cryptocurrencies are mined and traded securely.</p>
+            <a href="downloads/digital-currency.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Cyber Security</h3>
+            <p>Understand common cyber threats like malware, phishing, and DDoS attacks. Learn about firewalls, encryption, and other security measures that protect data and systems from unauthorized access.</p>
+            <a href="downloads/cyber-security.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Automated & Emerging Technologies -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Automated & Emerging Technologies</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Automated Systems</h3>
+            <p>Explore automated systems like industrial robots, smart home devices, and AI-driven tools. Learn how automation improves efficiency and reduces human intervention in various industries.</p>
+            <a href="downloads/automated-systems.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Robotics</h3>
+            <p>Understand the mechanics behind robotic arms, drones, and autonomous vehicles. Learn how AI integration enhances robotics capabilities, enabling machines to perform complex tasks with precision.</p>
+             <a href="downloads/robotics.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>Dive into machine learning algorithms, neural networks, and deep learning models. Learn how AI is used in applications like image recognition, natural language processing, and predictive analytics.</p>
+            <a href="downloads/artificial-intelligence.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Algorithm Design & Problem-Solving -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Algorithm Design & Problem-Solving</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Development Life Cycle</h3>
+            <p>Learn about the software development life cycle (SDLC), including phases like requirements gathering, design, implementation, testing, deployment, and maintenance. Understand iterative and agile methodologies.</p>
+             <a href="downloads/development-life-cycle.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Computer Sub-Systems</h3>
+            <p>Explore the interaction between hardware and software sub-systems. Understand how operating systems manage resources, and how applications interact with hardware through APIs and drivers.</p>
+            <a href="downloads/computer-subsystems.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Algorithms</h3>
+            <p>Study sorting algorithms like bubble sort, merge sort, and quicksort. Learn about searching techniques like binary search and linear search, and understand how algorithms are optimized for performance.</p>
+            <a href="downloads/algorithms.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Standard Methods of a Solution</h3>
+            <p>Understand standard problem-solving techniques like divide and conquer, dynamic programming, and greedy algorithms. Learn how these methods are applied to solve complex computational problems efficiently.</p>
+            <a href="downloads/standard-methods.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Validation & Verification</h3>
+            <p>Explore validation techniques like test data generation and verification methods like trace tables. Learn how these processes ensure that software meets requirements and functions correctly before deployment.</p>
+            <a href="downloads/validation-verification.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Identifying Errors</h3>
+            <p>Learn debugging techniques to identify and fix errors in code. Understand common types of bugs like syntax errors, runtime errors, and logical errors, and how to use tools like debuggers to resolve them.</p>
+           <a href="downloads/debugging.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Programming -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Programming</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Programming Concepts</h3>
+            <p>Master fundamental programming concepts like variables, loops, conditionals, and functions. Learn how to structure code using control flow and modular programming techniques to build efficient applications.</p>
+            <a href="downloads/programming-concepts.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>Arrays</h3>
+            <p>Understand arrays and lists as fundamental data structures. Learn how to manipulate arrays, perform operations like sorting and searching, and explore advanced data structures like stacks, queues, and linked lists.</p>
+            <a href="downloads/arrays.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>File Handling</h3>
+            <p>Learn how to read from and write to files in various programming languages. Understand file I/O operations, handling exceptions, and working with different file formats like CSV, JSON, and XML.</p>
+           <a href="downloads/file-handling.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Databases -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Databases</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Databases</h3>
+            <p>Explore relational databases and their structure, including tables, rows, and columns. Learn about primary keys, foreign keys, and how relationships between tables are established using SQL.</p>
+            <a href="downloads/databases.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+        <article class="card">
+            <h3>SQL</h3>
+            <p>Master Structured Query Language (SQL) for database management. Learn how to create, read, update, and delete records (CRUD operations), and understand advanced queries like joins, subqueries, and indexing.</p>
+            <a href="downloads/sql.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+<!-- Boolean Logic -->
+<section class="data-section">
+    <div class="section-header">
+        <h2>Boolean Logic</h2>
+    </div>
+    <div class="cards-container">
+        <article class="card">
+            <h3>Boolean Logic</h3>
+            <p>Understand the basics of Boolean logic, including AND, OR, NOT, NAND, NOR, and XOR gates. Learn how to construct truth tables and simplify Boolean expressions using Karnaugh maps and De Morgan's laws.</p>
+             <a href="downloads/boolean-logic.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+        </article>
+    </div>
+</section>
+</body>
+</html>

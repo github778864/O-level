@@ -16,6 +16,7 @@
         body {
             background-color: #0a192f;
             color: #ccd6f6;
+            transition: background-color 0.3s ease; /* Added transition for smooth color changes */
         }
         /* Header Styles */
         header {
@@ -37,23 +38,40 @@
             justify-content: center;
             gap: 15px;
         }
-        /* Section & Card Styles */
+       /* Section Styles */
         .data-section {
             padding: 2rem;
         }
         .section-header {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin */
+            cursor: pointer;
         }
-        .section-header h2 {
+         .section-header h2 {
             color: #ccd6f6;
             margin-right: 10px;
         }
+          .section-header .material-icons {
+            transition: transform 0.3s ease;
+             color: #64ffda; /* Add color */
+             font-size: 1.5em;
+        }
+        .section-header.collapsed .material-icons {
+            transform: rotate(-180deg);
+        }
+
         .cards-container {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            max-height: 1000px;  /* Initial max height. Adjust as needed. */
+            transition: max-height 0.5s ease;
+            overflow: hidden;
+        }
+
+        .cards-container.collapsed {
+             max-height: 0;
         }
         .card {
             background-color: #112240;
@@ -81,7 +99,7 @@
             margin-bottom: 20px;
             text-align: center; /* Center card description */
         }
-        .download-btn {
+         .download-btn {
             background-color: #64ffda;
             color: #112240;
             border: none;
@@ -100,6 +118,24 @@
         .download-btn:focus {
             outline: 2px solid #52b788;
         }
+         .download-btn {
+            text-decoration: none; /* Removes underline */
+            color: #112240; /* Optional: Set text color */
+            background-color: #64ffda; /* Optional: Set button background color */
+            padding: 10px 20px; /* Optional: Add padding for better appearance */
+            border-radius: 5px; /* Optional: Rounded corners */
+            font-size: 16px; /* Optional: Adjust font size */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            display: inline-block; /* Ensures proper alignment */
+            margin-top: 10px; /* Adds some space between text and button */
+              transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect for the download button */
+         .download-btn:hover {
+            background-color: #52b788; /* Darker blue on hover */
+            color: #0a192f;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -111,22 +147,7 @@
                 width: 100%; /* Full width on small screens */
             }
         }
-         .download-btn {
-            text-decoration: none; /* Removes underline */
-            color: white; /* Optional: Set text color */
-            background-color: #007BFF; /* Optional: Set button background color */
-            padding: 10px 20px; /* Optional: Add padding for better appearance */
-            border-radius: 5px; /* Optional: Rounded corners */
-            font-size: 16px; /* Optional: Adjust font size */
-            cursor: pointer; /* Changes cursor to pointer on hover */
-            display: inline-block; /* Ensures proper alignment */
-            margin-top: 10px; /* Adds some space between text and button */
-        }
 
-        /* Hover effect for the download button */
-        .download-btn:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
     </style>
 </head>
 <body>
@@ -136,19 +157,20 @@
 
 <!-- Data Representation -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Data Representation</h2>
+        <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Number Systems</h3>
-            <p>Explore binary, hexadecimal, and denary number systems. Learn how to convert between these systems, understand their applications in computing, and grasp the significance of base-2 (binary) in digital electronics.</p>
-             <a href="https://drive.google.com/open?id=1obO7J02sx0htACp3q2RvoIYgMkCoVA1O&usp=drive_copy" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+             <p>Explore binary, hexadecimal, and denary number systems. Learn how to convert between these systems, understand their applications in computing, and grasp the significance of base-2 (binary) in digital electronics.</p>
+           <a href="https://drive.google.com/open?id=1Ckxuj2eyD-tAw89tWle5nEXHliONKS83&usp=drive_copy" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
         </article>
         <article class="card">
             <h3>Text, Sound & Images</h3>
             <p>Understand how text is represented using ASCII and Unicode encoding. Dive into sound representation through sampling and quantization, and explore image formats like JPEG, PNG, and GIF, including compression techniques.</p>
-           <a href="https://drive.google.com/open?id=1Ckxuj2eyD-tAw89tWle5nEXHliONKS83&usp=drive_copy" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
+            <a href="https://drive.google.com/open?id=1obO7J02sx0htACp3q2RvoIYgMkCoVA1O&usp=drive_copy" class="download-btn" target="_blank" rel="noopener noreferrer">Download <span class="arrow">↓</span></a>
         </article>
         <article class="card">
             <h3>Data Storage & Compression</h3>
@@ -159,10 +181,11 @@
 </section>
 <!-- Hardware -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Hardware</h2>
+       <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Computer Architecture</h3>
             <p>Study the Von Neumann architecture, which forms the basis of modern computers. Learn about the CPU's role in executing instructions, the fetch-decode-execute cycle, and how memory interacts with the processor.</p>
@@ -187,10 +210,11 @@
 </section>
 <!-- Software -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Software</h2>
+        <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Types of Software & Interrupts</h3>
             <p>Understand the difference between system software (OS, drivers) and application software (word processors, browsers). Learn about interrupts and how they allow hardware to communicate with the CPU.</p>
@@ -205,10 +229,11 @@
 </section>
 <!-- The Internet & its Uses -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>The Internet & its Uses</h2>
+          <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>The Internet & the World Wide Web</h3>
             <p>Understand the difference between the internet and the World Wide Web. Learn about web protocols like HTTP/HTTPS, how browsers render web pages, and the role of cookies in tracking user sessions.</p>
@@ -228,10 +253,11 @@
 </section>
 <!-- Automated & Emerging Technologies -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Automated & Emerging Technologies</h2>
+          <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Automated Systems</h3>
             <p>Explore automated systems like industrial robots, smart home devices, and AI-driven tools. Learn how automation improves efficiency and reduces human intervention in various industries.</p>
@@ -251,10 +277,11 @@
 </section>
 <!-- Algorithm Design & Problem-Solving -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Algorithm Design & Problem-Solving</h2>
+          <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Development Life Cycle</h3>
             <p>Learn about the software development life cycle (SDLC), including phases like requirements gathering, design, implementation, testing, deployment, and maintenance. Understand iterative and agile methodologies.</p>
@@ -289,10 +316,11 @@
 </section>
 <!-- Programming -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Programming</h2>
+          <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Programming Concepts</h3>
             <p>Master fundamental programming concepts like variables, loops, conditionals, and functions. Learn how to structure code using control flow and modular programming techniques to build efficient applications.</p>
@@ -312,10 +340,11 @@
 </section>
 <!-- Databases -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Databases</h2>
+          <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Databases</h3>
             <p>Explore relational databases and their structure, including tables, rows, and columns. Learn about primary keys, foreign keys, and how relationships between tables are established using SQL.</p>
@@ -330,10 +359,11 @@
 </section>
 <!-- Boolean Logic -->
 <section class="data-section">
-    <div class="section-header">
+    <div class="section-header collapsed">
         <h2>Boolean Logic</h2>
+          <span class="material-icons">expand_more</span>
     </div>
-    <div class="cards-container">
+    <div class="cards-container collapsed">
         <article class="card">
             <h3>Boolean Logic</h3>
             <p>Understand the basics of Boolean logic, including AND, OR, NOT, NAND, NOR, and XOR gates. Learn how to construct truth tables and simplify Boolean expressions using Karnaugh maps and De Morgan's laws.</p>
@@ -341,5 +371,17 @@
         </article>
     </div>
 </section>
+
+ <script>
+       document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const cardsContainer = this.nextElementSibling;
+                const icon = this.querySelector('.material-icons');
+
+                 cardsContainer.classList.toggle('collapsed');
+                this.classList.toggle('collapsed');
+            });
+        });
+    </script>
 </body>
 </html>
